@@ -5,20 +5,20 @@
 class Keel < Formula
   desc ""
   homepage "https://github.com/teamkeel/cli"
-  version "0.321.0"
+  version "0.321.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.321.0/cli_0.321.0_Darwin_x86_64.tar.gz"
-      sha256 "833591d14845530c8c6862efaa9618d4802d4624afccb45513430db75a666d30"
+      url "https://github.com/teamkeel/cli/releases/download/v0.321.1/cli_0.321.1_Darwin_x86_64.tar.gz"
+      sha256 "1c6eb02d204dd72b08732397431ee89a06aec2263c777e4e4c3097f914abc158"
 
       def install
         bin.install "cli" => "keel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/teamkeel/cli/releases/download/v0.321.0/cli_0.321.0_Darwin_arm64.tar.gz"
-      sha256 "68466a6c3f23bc656e86c85184a19831a17826e3b58a5efb4ec79d8e12409af8"
+      url "https://github.com/teamkeel/cli/releases/download/v0.321.1/cli_0.321.1_Darwin_arm64.tar.gz"
+      sha256 "b00e0df840c644e2582c51d7b7bd19f38409535199d8b732db9f396b5fbd4dc6"
 
       def install
         bin.install "cli" => "keel"
@@ -27,17 +27,17 @@ class Keel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.321.0/cli_0.321.0_Linux_x86_64.tar.gz"
-      sha256 "5ec596918c07f39206b09b2bbc2d9a5f12b934b9f0490d6a5b7989e2afb0d9a6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/teamkeel/cli/releases/download/v0.321.1/cli_0.321.1_Linux_arm64.tar.gz"
+      sha256 "27238581cab1bd8d5ac17bb19da98ede0685de27d2b8aa27229c8d92297647d1"
 
       def install
         bin.install "cli" => "keel"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamkeel/cli/releases/download/v0.321.0/cli_0.321.0_Linux_arm64.tar.gz"
-      sha256 "372ed4634e16ee78421235e016f8a7e590c7dc47e53c80ec7696fc298171eef8"
+    if Hardware::CPU.intel?
+      url "https://github.com/teamkeel/cli/releases/download/v0.321.1/cli_0.321.1_Linux_x86_64.tar.gz"
+      sha256 "a4eb8b3a09adcf4eeff76f272ae754cfddc2595a832a64eb70843b31606f5c80"
 
       def install
         bin.install "cli" => "keel"
