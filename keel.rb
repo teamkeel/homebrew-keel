@@ -5,20 +5,20 @@
 class Keel < Formula
   desc ""
   homepage "https://github.com/teamkeel/cli"
-  version "0.359.3-prerelease16"
+  version "0.365.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/0.359.3-prerelease16/cli_0.359.3-prerelease16_Darwin_x86_64.tar.gz"
-      sha256 "e21d57f4e3d53e16b95a16b5725bd22beca9213eed68de884cce5be8a026324c"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.10/cli_0.365.10_Darwin_x86_64.tar.gz"
+      sha256 "16a093b04ac8bedd28c03545b83cd67f97c91d632f5e3e0df7e8bf9e7a9e9224"
 
       def install
         bin.install "cli" => "keel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/teamkeel/cli/releases/download/0.359.3-prerelease16/cli_0.359.3-prerelease16_Darwin_arm64.tar.gz"
-      sha256 "54f3b558f246d5d82aa0926a8bce32ae88494a18f47be20d6622add00d27118d"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.10/cli_0.365.10_Darwin_arm64.tar.gz"
+      sha256 "60836bc8f9c5c3f45718e791c1d224e6b194347556727a297db79deed5118d9e"
 
       def install
         bin.install "cli" => "keel"
@@ -28,16 +28,16 @@ class Keel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamkeel/cli/releases/download/0.359.3-prerelease16/cli_0.359.3-prerelease16_Linux_arm64.tar.gz"
-      sha256 "4875eb7dcfab039e2519df908f39e0d9ad53297ccf59df869c473851a392fcb2"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.10/cli_0.365.10_Linux_arm64.tar.gz"
+      sha256 "ac84314562be3dff56d147a08ccdd1c2ceff53a0bcc7c4984f1866809ccd8447"
 
       def install
         bin.install "cli" => "keel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/0.359.3-prerelease16/cli_0.359.3-prerelease16_Linux_x86_64.tar.gz"
-      sha256 "9baf4f6ccdd100a87180299380bd2cc726aa3a13ba09cb854d565547f2e82817"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.10/cli_0.365.10_Linux_x86_64.tar.gz"
+      sha256 "cde720d3fb82a4af59e66c9251abb4810344b5920da96d424107f1bb4a0ddf88"
 
       def install
         bin.install "cli" => "keel"
