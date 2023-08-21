@@ -5,20 +5,20 @@
 class Keel < Formula
   desc ""
   homepage "https://github.com/teamkeel/cli"
-  version "0.365.13"
+  version "0.365.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.13/cli_0.365.13_Darwin_x86_64.tar.gz"
-      sha256 "6e5061d0043dcf718894f8fa89a7f59d14ac8ae412890ad1c2f5390033d9803f"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Darwin_x86_64.tar.gz"
+      sha256 "ad6f6a92690c8213593e562ffa7dd2b7030561c62539c6f2119499be21230c61"
 
       def install
         bin.install "cli" => "keel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.13/cli_0.365.13_Darwin_arm64.tar.gz"
-      sha256 "ca3d07ccac3b043522198cd53e4391fb1d70c85aae78526634f86f2a01e75b6b"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Darwin_arm64.tar.gz"
+      sha256 "e82dfca9788fa675a69f443c1a6589976802567add7242c3f807f474dbba1551"
 
       def install
         bin.install "cli" => "keel"
@@ -28,16 +28,16 @@ class Keel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.13/cli_0.365.13_Linux_arm64.tar.gz"
-      sha256 "c5387909770814afcaa98f85fa5c6cd3a4891c29cb434cc6b03dac8ade8829fc"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Linux_arm64.tar.gz"
+      sha256 "dadd1436efa54b79b1b29b95f1bc4991828c4b672d47d59e22dec244ec885b30"
 
       def install
         bin.install "cli" => "keel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.13/cli_0.365.13_Linux_x86_64.tar.gz"
-      sha256 "4badc9bfb08af6d601a83681049074ae4f90d9f6463448c17304c65481d21777"
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Linux_x86_64.tar.gz"
+      sha256 "91c0c8298d2e4f6b5cff478bcf8b0ad9f933517f6d4591b5fcc7e30f9aa1dc11"
 
       def install
         bin.install "cli" => "keel"
