@@ -5,20 +5,20 @@
 class Keel < Formula
   desc ""
   homepage "https://github.com/teamkeel/cli"
-  version "0.365.14"
+  version "0.365.15"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Darwin_x86_64.tar.gz"
-      sha256 "ad6f6a92690c8213593e562ffa7dd2b7030561c62539c6f2119499be21230c61"
+    if Hardware::CPU.arm?
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.15/cli_0.365.15_Darwin_arm64.tar.gz"
+      sha256 "a4e19437f27012ed5dd5f6e25c26bde7a83a6b52fd93699cbe036a6983cb8597"
 
       def install
         bin.install "cli" => "keel"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Darwin_arm64.tar.gz"
-      sha256 "e82dfca9788fa675a69f443c1a6589976802567add7242c3f807f474dbba1551"
+    if Hardware::CPU.intel?
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.15/cli_0.365.15_Darwin_x86_64.tar.gz"
+      sha256 "8595a6aa657ed26511a7ee2589dca9341b492964517fb5b592cf02d4a137d22a"
 
       def install
         bin.install "cli" => "keel"
@@ -27,17 +27,17 @@ class Keel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Linux_arm64.tar.gz"
-      sha256 "dadd1436efa54b79b1b29b95f1bc4991828c4b672d47d59e22dec244ec885b30"
+    if Hardware::CPU.intel?
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.15/cli_0.365.15_Linux_x86_64.tar.gz"
+      sha256 "4ffb3a9ed4f5a6122952d50c303fc23bbe32ed987cb24e43b9c3ca836f8b45ab"
 
       def install
         bin.install "cli" => "keel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.365.14/cli_0.365.14_Linux_x86_64.tar.gz"
-      sha256 "91c0c8298d2e4f6b5cff478bcf8b0ad9f933517f6d4591b5fcc7e30f9aa1dc11"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/teamkeel/cli/releases/download/v0.365.15/cli_0.365.15_Linux_arm64.tar.gz"
+      sha256 "bfaf190ec55e5f4daf13c075675c6be546455d8df2bcf4ee48dfd68283f7409e"
 
       def install
         bin.install "cli" => "keel"
