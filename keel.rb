@@ -9,7 +9,7 @@ class Keel < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Darwin_x86_64.tar.gz"
       sha256 "e6742dcda5d6e7f9354ff150e94370a7a8738f23932bb0ac76072b132ed75eb3"
 
       def install
@@ -17,7 +17,7 @@ class Keel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Darwin_arm64.tar.gz"
       sha256 "6967e015745cf2d2b0b24132e6f89aee74e15e3fe7dc984846df9016a87e057e"
 
       def install
@@ -28,7 +28,7 @@ class Keel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Linux_arm64.tar.gz"
       sha256 "0e1ef0fe93c6bce364e699986d6ca87c221dd9c2b1b875ee2ba8913de3ccd35a"
 
       def install
@@ -36,7 +36,7 @@ class Keel < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      url "https://github.com/teamkeel/cli/releases/download/v0.366.0/cli_0.366.0_Linux_x86_64.tar.gz"
       sha256 "d8292843577bf056b1b1d69db5df109b0de5e4baf94c2d73b2cb4045ae02ae19"
 
       def install
